@@ -114,3 +114,11 @@ a.active,a:hover{
         padding: 0;
     }
 }
+#Learn
+{
+    background-color: #1f2a47;
+    color: #bfc0c5;
+    font-size:  17px;
+    font-family: montserrat;
+    border: none;
+}
