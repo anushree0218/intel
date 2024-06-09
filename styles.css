@@ -60,3 +60,31 @@ body {
 .service-links a:hover {
     background-color: #0056b3;
 }
+.photo-container
+{
+    /* height: 100vh; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+}
+
+.swiper
+{
+    height: fit-content;
+    width: 100%;
+}
+
+.swiper-slide img
+{
+    width: 100%;
+}
+.swiper .swiper-button-prev, .swiper .swiper-button-next
+{
+    color: black;
+}
+.swiper .swiper-pagination-buller-active
+{
+    background:black ;
+}
