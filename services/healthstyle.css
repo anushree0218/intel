@@ -114,14 +114,14 @@ a.active,a:hover{
         padding: 0;
     }
 }
-#Learn
+/* #Learn
 {
     background-color: #1f2a47;
     color: #bfc0c5;
     font-size:  17px;
     font-family: montserrat;
     border: none;
-}
+} */
 
 .description
 {
@@ -130,4 +130,14 @@ a.active,a:hover{
 .details
 {
     width: 900px;
+}
+
+.selectdrop
+{
+    background-color: #1f2a47;
+    color: #bfc0c5;
+    font-size:  17px;
+    font-family: montserrat;
+    border: none;
+    
 }
