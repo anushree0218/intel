@@ -181,3 +181,12 @@ nav ul {
   .dropbtn {
     border-bottom: 3px solid #1f2a47;
    }
+
+.description
+{
+    display: flex;
+}
+.details
+{
+    width: 900px;
+}
