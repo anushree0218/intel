@@ -1,8 +1,12 @@
 var map;
 var infowindow;
 
+    
+   
+    
+  
 function initialize() {
-  var pyrmont = new google.maps.LatLng(coords.lat,coords.lon); // sample location to start with: Mumbai, India
+  var pyrmont = new google.maps.LatLng(28.5971,77.1311); // sample location to start with: Mumbai, India
 
   map = new google.maps.Map(document.getElementById('map-canvas'), {
     center: pyrmont,
