@@ -19,8 +19,8 @@
 .photo-container
 {
     
-    width: 80%;
-    margin-left: 8rem;
+    width: 100%;
+    /* margin-left: 5rem; */
     display: flex;
     justify-content: center;
    
@@ -85,8 +85,4 @@
     margin: 20px; /* Adjust margins as needed */
     /* margin-left: 23px;
     padding: 20px 15px; /* Adjust padding as needed */
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-  } */ */
+    
