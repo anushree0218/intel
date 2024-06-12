@@ -9,7 +9,6 @@
     <title>health</title>
 </head>
 <body>
-    <nav>
         <nav>
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
@@ -24,7 +23,6 @@
                 <li><a href="#">emergency services</a></li>
             </ul>
            </nav>
-    </nav>
     <main>
         <h1>Welcome to our Health Services Page</h1>
         <br>
@@ -41,18 +39,59 @@
             <li>Community Health Resources: Learn about local health clinics, hospitals, and other healthcare facilities available in your area.</li>
             </ul>
         </div>
-        <div class="pics">
+        <div class="photo-container">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <img src="health1.png"  width="100px" height="100px" ></div>
+                  <div class="swiper-slide"> 
+                    <img src="health2.jpeg" width="150px" height="80px"></div>
+                  <div class="swiper-slide">
+                    <img src="health3.png" width="150px" height="100px"></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+               
+              </div>
+          </div>
+        <!-- <div class="pics">
         <h2>Related</h2>
         <a href="services\health1.png"><img src="health1.png" width="100px" height="100px"></a>
         <a href="services\health2.jpeg"><img src="health2.jpeg" width="150px" height="80px"></a>
         <a href="services\health3.png"><img src="health3.png" width="150px" height="100px"></a>
-        </div>
-        </div>
+        </div> -->
+       
         <div id="iframeDiv">
             <iframe src="location.html" iframetag></iframe>
          </div>
         
         
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+     const swiper = new Swiper('.swiper', {
+    
+   loop: true,
+ 
+   pagination: {
+     el: '.swiper-pagination',
+     clickable: true,
+   },
+ 
+   navigation: {
+     nextEl: '.swiper-button-next',
+     prevEl: '.swiper-button-prev',
+   },
+ 
+  
+ });
+    </script>
 </body>
 </html>
