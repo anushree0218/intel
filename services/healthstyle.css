@@ -141,12 +141,12 @@ a.active,a:hover{
     border: none;
     
 }
-.photo-container
+/* .photo-container
 {
     
     width: 25%;
     /* margin-left: 5rem; */
-    display: flex;
+    /* display: flex;
     justify-content: center;
    
 
@@ -155,9 +155,9 @@ a.active,a:hover{
 .swiper
 {
     height: fit-content;
-    width: 100%;
+    width: 100%; */
     /* background-color: #bfc0c5; */
-}
+ /*}
 
 .swiper-slide img
 {
@@ -166,10 +166,10 @@ a.active,a:hover{
 .swiper .swiper-button-prev, .swiper .swiper-button-next
 {
     color: black;
-    background-color: white; /*to change the background color of the swipper */ 
+    background-color: white; to change the background color of the swipper 
 }
 .swiper .swiper-pagination-buller-active
 {
     background:black ;
-    /* background-color: black; */
-}
+    background-color: black;
+} */
