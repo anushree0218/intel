@@ -7,42 +7,36 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous"  >
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
     <title>Education</title>
 </head>
-<body>
-    
-        
+<body>      
     <nav>
-        <nav>
-            
-                    <input type="checkbox" id="check">
-                    <label for="check" class="checkbtn">
-                        <i class="fas fa-bars"></i>
-                    </label>
-                    <label class="logo">Education</label>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li>
+             
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+             <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Education</label>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <select class="selectdrop" id="Learning">
+                        <option value="Learning">LEARNING</option>
+                        <option value="Colleges">COLLEGES</option>
+                        <option value="Mentors">MENTORS</option>
+                        <option value="Tuition">TUITIONS</option>
+                        <option value="Materials">MATERIALS</option>
+                        <option value="Reusable materials">REUSABLE MATERIALS</option>
+                    </select></li>
+                <li><a href="#">Activity Center</a></li>
+                <li><a href="#">Internship</a></li>
+            </ul>
+    </nav>
                         
-
-                            <select class="selectdrop" id="Learning">
-                                <option value="Learning">LEARNING</option>
-                                <option value="Colleges">COLLEGES</option>
-                                <option value="Mentors">MENTORS</option>
-                            
-                        
-                                <option value="Tuition">TUITIONS</option>
-                                <option value="Materials">MATERIALS</option>
-                                <option value="Reusable materials">REUSABLE MATERIALS</option>
-                            </select></li>
-                       
-                        <li><a href="#">Activity Center</a></li>
-                        <li><a href="#">Internship</a></li>
-                    </ul>
-            
-                    
-                    
                 
     <h1>Welcome to the Education Services Page</h1>
 
@@ -56,15 +50,48 @@
         <li>Adult Education: Access resources for adult learners, including GED programs, continuing education courses, and job training.</li>
         <li>Educational Support Services: Find tutoring, counseling, and other support services to help students succeed academically.</li>
     </ul>
-</div>
-<div class="pics">
-<h2>Related</h2>
-<a href="services\edu1.png"><img src="edu1.png" width="100px" height="100px"></a>
-<a href="services\edu2.jpeg"><img src="edu2.jpeg" width="150px" height="80px"></a>
-<a href="services\edu3.png"><img src="edu3.png" width="150px" height="100px"></a>
-</div>
-</div>
-    
+
+<div class="photo-container">
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="edu1.png"  width="100px" height="100px" ></div>
+          <div class="swiper-slide"> 
+            <img src="edu2.jpeg" width="150px" height="80px"></div>
+          <div class="swiper-slide">
+            <img src="edu3.png" width="150px" height="100px"></div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      
+       
+      </div>
+  </div>
 </main>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+          <script>
+           const swiper = new Swiper('.swiper', {
+          
+         loop: true,
+        
+         pagination: {
+           el: '.swiper-pagination',
+           clickable: true,
+         },
+        
+         navigation: {
+           nextEl: '.swiper-button-next',
+           prevEl: '.swiper-button-prev',
+         },
+        
+        
+        });
+          </script>
 </body>
 </html>
