@@ -46,10 +46,11 @@
         }
 
         function findNearbyPlaces(latitude, longitude) {
-            var overpassUrl = 'https://overpass-api.de/api/interpreter?data=[out:json];node[amenity=schools&colleges](around:2000,${latitude},${longitude});out%27';
+            var overpassUrl ='http://overpass-api.de/api/interpreter';
+            var data ='[out:json][timeout:25];(node["amenity"="school"](around:10000,48.1351,11.5820););out;;'                                                  ';
 
             fetch(overpassUrl)
-                .then(response => response.json())
+                .then(response => response.json())                                      
                 .then(data => {
                     data.elements.forEach(element => {
                         if (element.lat && element.lon) {
