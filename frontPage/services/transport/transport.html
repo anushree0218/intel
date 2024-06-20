@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="healthstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous"  >
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+    <title>transport</title>
+</head>
+<body>
+    <nav>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Transport</label>
+        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Service Centers</a></li>
+                <li><a href="#">Rent stations</a></li>
+                <li><a href="#">Buses</a></li>
+                <li><a href="#">Railway station </a></li>
+                <li><a href="#">Rental places</a></li>
+            </ul>
+           </nav>
+    </nav>
+    <h1>Welcome to our Transport Services Page</h1>
+    <br>
+    <p>
+        Efficient and accessible transportation is vital for everyday life. Our transport services page provides you with all the information you need about public transportation options, subsidies, and programs designed to improve mobility for all citizens. Whether you are commuting to work, school, or need special transport services, we are here to help.
+
+        On this page, you will find comprehensive information about:</p>
+<ul>
+<li>Public Transportation: Learn about bus, train, and subway services, including routes, schedules, and fare information.</li>
+<li>Subsidies and Discounts: Find out about available subsidies and discounts for seniors, students, and low-income individuals.</li>
+<li>Special Transport Services: Access information on services for individuals with disabilities, including paratransit and accessible transport options.</li>
+<li>Transportation Planning: Discover resources for planning your commute and finding the best routes to your destination.</li>
+<li>Traffic and Road Safety: Get updates on traffic conditions, road safety tips, and information on ongoing roadworks and improvements.</li>
+</ul>
+</div>
+<div class="photo-container">
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="Travel1.jpeg"  width="100px" height="100px" ></div>
+          <div class="swiper-slide"> 
+            <img src="travel2.jpeg" width="150px" height="80px"></div>
+          <div class="swiper-slide">
+            <img src="travel3.png" width="150px" height="100px"></div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      
+       
+      </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+   const swiper = new Swiper('.swiper', {
+  
+ loop: true,
+
+ pagination: {
+   el: '.swiper-pagination',
+   clickable: true,
+ },
+
+ navigation: {
+   nextEl: '.swiper-button-next',
+   prevEl: '.swiper-button-prev',
+ },
+
+
+});
+  </script>
+</body>
+</html>

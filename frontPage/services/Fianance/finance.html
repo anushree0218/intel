@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="healthstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous"  >
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+    <title>Finance</title>
+</head>
+<body>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Finance</label>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Interest rates</a></li>
+                <li><a href="#">Tax Saving plans</a></li>
+                <li><a href="#">Investment details</a></li>
+                <li><a href="#">Banking apps</a></li>
+            </ul>
+           </nav>
+    <main>
+        <h1>Welcome to our Finance page</h1>
+        <br>
+
+        
+            <p>
+
+                Managing your finances effectively is crucial for achieving financial stability and security. Our financial services page offers detailed information about various financial programs and resources available to support you in managing your money, accessing financial aid, and planning for the future.
+                
+                On this page, you will find comprehensive information about:</p>
+                
+                <ul>
+                <li>Financial Assistance Programs: Learn about government-funded programs that provide financial aid for individuals and families in need.</li>
+                <li>Tax Services: Access resources for understanding and filing your taxes, including information on tax credits and deductions.</li>
+                <li>Financial Literacy: Discover educational resources to help you improve your financial literacy and make informed financial decisions.</li>
+                <li>Loans and Grants: Find information on available loans and grants for education, housing, and small businesses.</li>
+                <li>Retirement Planning: Get advice and resources to help you plan and save for a secure retirement.</li>
+
+        </ul>
+        <div class="photo-container">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <img src="finan1.jpeg"  width="100px" height="100px" ></div>
+                  <div class="swiper-slide"> 
+                    <img src="finan2.png" width="150px" height="80px"></div>
+                  <div class="swiper-slide">
+                    <img src="finan3.png" width="150px" height="100px"></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+               
+              </div>
+          </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+          <script>
+           const swiper = new Swiper('.swiper', {
+          
+         loop: true,
+        
+         pagination: {
+           el: '.swiper-pagination',
+           clickable: true,
+         },
+        
+         navigation: {
+           nextEl: '.swiper-button-next',
+           prevEl: '.swiper-button-prev',
+         },
+        
+        
+        });
+          </script>
+</body>
+</html>

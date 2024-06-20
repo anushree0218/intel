@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="healthstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous"  >
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+    <title>Housing</title>
+</head>
+<body>
+    <nav>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Housing</label>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Helper Details</a></li>
+                <li><a href="#">Food Stores</a></li>
+                <li><a href="#">Packers and movers</a></li>
+                <li><a href="#">Brokers</a></li>
+                <li><a href="#">Renting</a></li>
+
+            </ul>
+           </nav>
+    </nav>
+    
+        
+    <div class="description">
+        <div class="details">
+        <h2>Welcome to the Housing Services Page</h2>
+        <br>
+
+        <p>Finding a safe and affordable place to live is a fundamental need for everyone. Our housing services are designed to assist you in navigating the various options and resources available, ensuring you find the best possible housing solution to meet your needs. Whether you are looking for rental assistance, seeking affordable housing, or need help with homeownership programs, we are here to guide you through the process.
+
+        On this page, you will find comprehensive information about:</p>
+<p><ul>
+<li>Affordable Housing Programs: Explore different programs that provide access to affordable rental and homeownership opportunities.</li>
+<li>Rental Assistance: Learn about the support available for renters, including subsidies, emergency rental assistance, and tenant rights.</li>
+<li>Homeownership Assistance: Discover resources and programs that can help you achieve the dream of owning a home.</li>
+<li>Housing Counseling Services: Access professional advice and counseling on various housing-related issues, including financial planning and foreclosure prevention.</li>
+<li>Emergency Housing Solutions: Find immediate assistance and resources if you are facing homelessness or need urgent housing support.</li></p></ul>
+<p>We are committed to helping you find a comfortable, secure, and affordable place to call home. Explore the resources and services detailed here to take the next step in your housing journey. If you need further assistance, our dedicated team is always here to help.
+
+</p> </div>
+</div>
+
+<div class="photo-container">
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="Housing-Icon-01.png"  width="100px" height="100px" ></div>
+          <div class="swiper-slide"> 
+            <img src="house.jpeg" width="150px" height="80px"></div>
+          <div class="swiper-slide">
+            <img src="house.jpeg" width="150px" height="100px"></div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      
+       
+      </div>
+  </div>
+   
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+          <script>
+           const swiper = new Swiper('.swiper', {
+          
+         loop: true,
+        
+         pagination: {
+           el: '.swiper-pagination',
+           clickable: true,
+         },
+        
+         navigation: {
+           nextEl: '.swiper-button-next',
+           prevEl: '.swiper-button-prev',
+         },
+        
+        
+        });
+          </script>
+</body>
+</html>

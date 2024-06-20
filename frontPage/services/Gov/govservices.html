@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="healthstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous"  >
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+    <title>Gov. Services</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Gov. Services</label>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <select   class="selectdrop" id="Travel Offices">
+                            <option value="Travel Offices">TRAVEL OFFICES</option>
+                            <option value="Visa">VISA</option>
+                            <option value="Passport">PASSPORT</option>
+                        </select>
+                        <select class="selectdrop" id="Doc Offices">
+                            <option value="Doc Offices">DOC OFFICES</option>
+                            <option value="Aadhar">AADHAR</option>
+                            <option value="Pan">PAN</option>
+                        </select>
+                        <select class="selectdrop" id="Doc Offices">
+                            <option value="Related Offices">RELATED OFFICES</option>
+                            <option value=" c h">JHGX</option>
+                            <option value="hdvy">JHBJH</option>
+                        </select>    
+                    </li>
+                </ul>
+    </nav>
+            
+    <main>
+        <h1>Welcome to the Government Services Page</h1>
+        <br>
+
+            <p>Navigating government services can often feel overwhelming, but we're here to make it easier for you. Our goal is to provide you with clear, concise information on a wide range of government services available to common people, ensuring you can access the support and resources you need efficiently and effectively. From legal assistance to social services, we cover everything you need to know to benefit from the programs and services offered by the government.
+            
+            On this page, you will find comprehensive information about:</p>
+            
+            <ul>
+            <li>Social Services: Learn about programs designed to support families, children, and individuals in need, including welfare, food assistance, and childcare services.</li>
+            <li>Healthcare Services: Access information on public health programs, medical assistance, and health insurance options available through government initiatives.</li>
+            <li>Employment Services: Explore job training programs, unemployment benefits, and other resources to help you secure and maintain employment.</li>
+            <li>Legal Assistance: Find information on free or low-cost legal services, including aid for civil, criminal, and family law issues.</li>
+            <li>Public Safety and Emergency Services: Understand the resources available for emergency situations, including disaster relief, fire services, and law enforcement support.</li>
+            <li>Education Services: Discover government-funded educational programs, grants, and scholarships for students of all ages.</li>
+            <li>Transportation Services: Learn about public transportation options, subsidies, and programs designed to improve mobility for all citizens.</li>
+            
+            We are committed to ensuring that you have the information and support necessary to take full advantage of the government services available to you. Explore the resources and services detailed here to get started. If you need further assistance, our dedicated team is always here to help.</ul>
+        
+        <div class="photo-container">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <img src="gov1.png"  width="100px" height="100px" ></div>
+                  <div class="swiper-slide"> 
+                    <img src="gov2.jpeg" width="150px" height="80px"></div>
+                  <div class="swiper-slide">
+                    <img src="gov3.jpeg" width="150px" height="100px"></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+               
+              </div>
+          </div>
+        
+        
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+          <script>
+           const swiper = new Swiper('.swiper', {
+          
+         loop: true,
+        
+         pagination: {
+           el: '.swiper-pagination',
+           clickable: true,
+         },
+        
+         navigation: {
+           nextEl: '.swiper-button-next',
+           prevEl: '.swiper-button-prev',
+         },
+        
+        
+        });
+          </script>
+</body>
+</html>

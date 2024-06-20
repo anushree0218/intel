@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation and Leaflet Map Example</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map-canvas {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Find Nearby Schools and Colleges Facilities</h1>
+    <button onclick="getLocation()">Get Location</button>
+    <p id="location"></p>
+    <p id="instructions"></p>
+    <div id="map-canvas"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map;
+        var markersLayer = new L.LayerGroup(); // Layer for markers
+
+        function initialize(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+
+            // Create a map centered at user's location
+            map = L.map('map-canvas').setView([latitude, longitude], 15);
+
+            // Add OpenStreetMap tiles
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19
+            }).addTo(map);
+
+            // Add user's location marker
+            L.marker([latitude, longitude]).addTo(map)
+                .bindPopup('You are here')
+                .openPopup();
+
+            // Find nearby hospitals and health facilities
+            findNearbyPlaces(latitude, longitude);
+        }
+
+        function findNearbyPlaces(latitude, longitude) {
+            var overpassUrl ='http://overpass-api.de/api/interpreter';
+            var data ='[out:json][timeout:25];(node["amenity"="school"](around:10000,48.1351,11.5820););out;;'                                                  ';
+
+            fetch(overpassUrl)
+                .then(response => response.json())                                      
+                .then(data => {
+                    data.elements.forEach(element => {
+                        if (element.lat && element.lon) {
+                            var marker = L.marker([element.lat, element.lon]).addTo(map)
+                                .bindPopup(element.tags.name || 'Schools and Colleges');
+                            markersLayer.addLayer(marker);
+                        }
+                    });
+
+                    markersLayer.addTo(map); // Add markers to map
+                })
+                .catch(error => {
+                    console.error('Error fetching data from Overpass API:', error);
+                });
+        }
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                document.getElementById("location").innerText = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            document.getElementById("location").innerText = "Latitude: " + latitude + 
+                " Longitude: " + longitude;
+            document.getElementById("instructions").innerText = "";
+
+            initialize(position);
+        }
+
+        function showError(error) {
+            let message;
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    message = "User denied the request for Geolocation. Please enable location services in your browser settings if you want to allow access.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    message = "Location information is unavailable. Please check your device settings.";
+                    break;
+                case error.TIMEOUT:
+                    message = "The request to get user location timed out. Please try again.";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    message = "An unknown error occurred. Please try again.";
+                    break;
+            }
+            document.getElementById("location").innerText = message;
+            document.getElementById("instructions").innerHTML = getInstructions();
+
+            // Optionally, initialize with a default location if the user denies permission
+            var defaultPosition = {
+                coords: {
+                    latitude: 19.107567,
+                    longitude: 72.8335
+                }
+            };
+            initialize(defaultPosition);
+        }
+
+        function getInstructions() {
+            return `<p>To enable location access:</p>
+                    <ul>
+                        <li><b>Chrome:</b> Go to Settings > Privacy and security > Site Settings > Location.</li>
+                        <li><b>Firefox:</b> Go to Preferences > Privacy & Security > Permissions > Location.</li>
+                        <li><b>Edge:</b> Go to Settings > Site permissions > Location.</li>
+                        <li><b>Safari:</b> Go to Preferences > Websites > Location.</li>
+                    </ul>`;
+        }
+
+        // Trigger geolocation request on page load
+        window.addEventListener('load', getLocation);
+    </script>
+</body>
+</html>
