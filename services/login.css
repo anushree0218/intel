@@ -115,3 +115,9 @@ form p a
     background: #eaeaea;
     color: #555;
 }
+#typeofperson {
+    background-color: #eaeaea;
+    border: none;
+    margin: 15px;
+    color: #555;
+}
