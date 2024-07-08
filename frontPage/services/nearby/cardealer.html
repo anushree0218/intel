@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfVVXRj107X9Ac_yaEU7btIQ1H0s0gWxA&libraries=places&callback=initialize"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Find Loan Providers</title>
+    <title>Find nearby atm</title>
     <style>
         #places img {
             max-width: 100%;
@@ -14,6 +14,7 @@
     </style>
 </head>
 <body>
+    <div class="design">Nearby Atm</div>
     <input id="searchTextField" type="text" size="50" placeholder="Enter your location">
     <div id="map" style="height: 500px;"></div>
     <table id="places"></table>
@@ -60,7 +61,7 @@
                 var request = {
                     location: place.geometry.location,
                     radius: '1000',
-                    type: ['bank']
+                    type: ['car_dealer']
                 };
 
                 service = new google.maps.places.PlacesService(map);
