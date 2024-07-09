@@ -3,16 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
     <title>Document</title>
 </head>
 
 
 <body>
+
     <div class="head">
-        <h1>Fixed Deposit (FD)</h1>
+        <h1 id="fd">Fixed Deposit (FD)</h1>
     </div>
+
+    <div class="container">
+        <h1>FD calculator</h1>
+        <div class="form-group">
+            <label for="principle">Principle Amount</label>
+            <input type="number" id="principle" placeholder="Enter the principle Amount">
+        </div>
+        <div class="form-group">
+            <label for="interestRate">Interest Rate</label>
+            <input type="number" id="interestRate" placeholder="Enter the Interest Amount">
+        </div>
+        <div class="form-group">
+            <label for="tenure">Tenure(in years):</label>
+            <input type="number" id="tenure" placeholder="Enter the tenure in years">
+        </div>
+        <button id="calculateBtn" class="calcu">Calculate</button>
+        <p id="result" class="result">Maturity Amount</p>
+    </div>
+
+    
     <table>
-        <h3>FD Interest Rates - Tax Saving FD</h3>
+        <h3 id="fd1">FD Interest Rates - Tax Saving FD</h3>
         <tr>
             <th rowspan="2">
                Banks 
@@ -29,247 +51,204 @@
         </tr>
 
         <tr>
-           <td>AU Small Finance Bank</td> 
+           <td ><a href="https://www.aubank.in/">AU Small Finance Bank</a></td> 
            <td>7.25%</td>
            <td>7.75%</td>
         </tr>
 
         <tr>
-            <td>Axis Bank</td> 
+            <td><a href="https://www.axisbank.com/">Axis Bank</a></td> 
             <td>7.00%</td>
             <td>7.75%</td>
          </tr>
 
          <tr>
-            <td>Bandhan Bank</td> 
+            <td><a href="https://bandhanbank.com/">Bandhan Bank</a></td> 
             <td>7.00%</td>
             <td>7.50%</td>
          </tr>
 
          <tr>
-            <td>Bank of Baroda</td> 
+            <td><a href="https://www.bankofbaroda.in/">Bank of Baroda</a></td> 
             <td>6.50% </td>
             <td>7.15% – 7.50%</td>
          </tr>
 
          <tr>
-            <td>Bank of India</td> 
+            <td><a href="https://bankofindia.co.in/">Bank of India</a></td> 
             <td>6.00%</td>
             <td>6.75% (6.90% for super senior citizens)</td>
          </tr>
 
          <tr>
-            <td>Bank of Maharashtra</td> 
+            <td><a href="https://bankofmaharashtra.in/">Bank of Maharashtra</a></td> 
             <td>6.50%</td>
             <td>7.00%</td>
          </tr>
 
          <tr>
-            <td>Capital Small Finance Bank Limited</td> 
+            <td><a href="https://www.capitalbank.co.in/">Capital Small Finance Bank Limited</a></td> 
             <td>7.10%</td>
             <td>7.60%</td>
          </tr>
 
          <tr>
-            <td>Central Bank of India</td> 
+            <td><a href="https://www.centralbankofindia.co.in/en">Central Bank of India</a></td> 
             <td>6.50%</td>
             <td>7.00%</td>
          </tr>
 
          <tr>
-            <td>DCB Bank </td> 
+            <td><a href="https://www.dcbbank.com/">DCB Bank </a></td> 
             <td>7.40%</td>
             <td>7.90%</td>
          </tr>
 
          <tr>
-            <td>Federal Bank</td> 
+            <td><a href="https://www.federalbank.co.in/">Federal Bank</a></td> 
             <td>6.60%</td>
             <td>7.25%</td>
          </tr>
 
          <tr>
-            <td>HDFC Bank</td> 
+            <td><a href="https://www.hdfcbank.com/">HDFC Bank</a></td> 
             <td>7.20%</td>
             <td>7.70%</td>
          </tr>
 
          <tr>
-            <td>ICICI Bank</td> 
+            <td><a href="https://www.icicibank.com/">ICICI Bank</a></td> 
             <td>7.00%</td>
             <td>7.50%</td>
          </tr>
 
          <tr>
-            <td>IDBI Bank</td> 
+            <td><a href="https://www.idbibank.in/">IDBI Bank</a></td> 
             <td>6.50%</td>
             <td>7.00%</td>
          </tr>
 
          <tr>
-            <td>IDFC First Bank</td> 
+            <td><a href="https://www.idfcfirstbank.com/">IDFC First Bank</a></td> 
             <td>7.00%</td>
             <td>7.50%</td>
          </tr>
 
          <tr>
-            <td>Indian Bank</td> 
+            <td><a href="https://www.indianbank.in/">Indian Bank</a></td> 
             <td>6.10% – 6.25%</td>
             <td>6.60% – 6.75%</td>
          </tr>
 
          <tr>
-            <td>Indian Overseas Bank</td> 
+            <td><a href="https://www.iob.in/">Indian Overseas Bank</a></td> 
             <td>6.50%</td>
             <td>7.00%</td>
          </tr>
 
          <tr>
-            <td>IndusInd Bank</td> 
+            <td><a href="https://www.indusind.com/in/en/personal.html">IndusInd Bank</a></td> 
             <td>7.25%</td>
             <td>7.75%</td>
          </tr>
 
          <tr>
-            <td>Jammu & Kashmir Bank</td> 
+            <td><a href="https://www.jkbank.com/">Jammu & Kashmir Bank</a></td> 
             <td>6.50%</td>
             <td>7.00%</td>
          </tr>
 
          <tr>
-            <td>Jana Small Finance Bank</td> 
+            <td><a href="https://www.janabank.com/">Jana Small Finance Bank</a></td> 
             <td>7.25%</td>
             <td>7.75%</td>
          </tr>
 
          <tr>
-            <td>Karnataka Bank</td> 
+            <td><a href="https://karnatakabank.com/">Karnataka Bank</a></td> 
             <td>6.50%</td>
             <td>6.90%</td>
          </tr>
 
          <tr>
-            <td>IDBI Bank</td> 
+            <td><a href="https://www.idbibank.in/">IDBI Bank</a></td> 
             <td>11.00% p.a. - 15.50% p.a. </td>
             <td>Contact the bank </td>
          </tr>
 
          <tr>
-            <td>Karur Vysya Bank</td> 
-            <td>Karur Vysya Bank</td>
+            <td><a href="https://www.kvb.co.in/">Karur Vysya Bank</a></td> 
+            <td>--</td>
             <td>0.50% onwards </td>
          </tr>
 
          <tr>
-            <td>Kotak Mahindra Bank</td>
+            <td><a href="https://www.kotak.com/en/home.html">Kotak Mahindra Bank</a></td>
             <td>.20%</td>
             <td>6.70%</td>
         </tr>
 <tr>
-    <td>Karur Vysya Bank</td>
-    <td>5.90%</td>
-	<td>5.90%</td>
-</tr>
-<tr>
-    <td>Punjab & Sind Bank</td>
+    <td><a href="https://punjabandsindbank.co.in/">Punjab & Sind Bank</a></td>
     <td>6.00%</td>
     <td>6.50%</td>
     </tr>
 <tr>
-    <td>RBL Bank</td>
+    <td><a href="https://www.rblbank.com/">RBL Bank</a></td>
     <td>7.10%</td>
 	<td>7.60%</td>
 </tr>
 <tr>
-    <td>SBM Bank India</td>
+    <td><a href="https://www.sbmbank.co.in/">SBM Bank India</a></td>
 	<td>7.75%</td>
 	<td>8.25%</td>
 </tr>
 <tr>
-    <td>Shivalik Small Finance Bank Limited</td>
+    <td><a href="https://shivalikbank.com/">Shivalik Small Finance Bank Limited</a></td>
 	<td>6.50%</td>
 	<td>7.00%</td>
 </tr>
 <tr>
-    <td>South Indian Bank</td>
+    <td><a href="https://www.southindianbank.com/">South Indian Bank</a></td>
 	<td>6.00%</td>
 	<td>6.50%</td>
 </tr>
 <tr>
-    <td>State Bank of India</td>
+    <td><a href="https://www.onlinesbi.sbi/">State Bank of India</a></td>
 	<td>6.50%</td>
 	<td>7.50%</td>
 </tr>
 <tr>
-    <td>Suryoday Small Finance Bank</td>
+    <td><a href="https://www.suryodaybank.com/">Suryoday Small Finance Bank</a></td>
 	<td>8.25%</td>
 	<td>8.75%</td>
 </tr>
 <tr>
-    <td>Tamilnad Mercantile Bank	<td>6.50%</td>
+    <td><a href="https://tmb.in/">Tamilnad Mercantile Bank</a><td>6.50%</td>
 	<td>7.00%</td>
 </tr>
 <tr>
-    <td>UCO Bank</td>
+    <td><a href="https://ucobank.com/en/">UCO Bank</a></td>
 	<td>6.20%</td>
 	<td>6.70%</td>
 </tr>
 <tr>
-    <td>Ujjivan Small Finance Bank</td>
+    <td><a href="https://www.ujjivansfb.in/">Ujjivan Small Finance Bank</a></td>
 	<td>7.20%</td>
 	<td>7.70%</td>
 </tr>
 <tr>
-    <td>Union Bank of India</td>
+    <td><a href="https://www.unionbankofindia.co.in/english/home.aspx">Union Bank of India</a></td>
 	<td>6.50%</td>
 	<td>7.00%</td>
 </tr>
 <tr>
-    <td>Utkarsh Small Finance Bank</td>
+    <td><a href="https://www.utkarsh.bank/">Utkarsh Small Finance Bank</a></td>
 	<td>7.50%</td>
 	<td>8.10%</td>
 </tr>
 </table>
 
 </section>
-<style>
-    *
-    {
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-        background-color: #fff;
-        font-size: 25px;
-        
-    }
-
-    .head
-    {
-        background: #1f2a47;
-        height: 60px;
-        color: #bfc0c5;
-    }
-
-    .wrapper-main{
-        /* width: 900px; */
-        margin: 0 auto;
-    }
-
-    table{
-        width: 100%;
-        border-spacing: 0;
-    }
-
-    th{
-        border: 1px solid black;
-    }
-
-    td{
-        border: 1px solid black;
-        font-size: 20px;
-    }
-</style>
+<script src="script.js"></script>
 </body>
 </html>
