@@ -5,33 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{!-- <link rel="stylesheet" href="frontpage/signupPage/tempelates/style.css"> --}}
     <script src="https://kit.fontawesome.com/3850ca793f.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Service provider</title>
 </head>
 <body>
 <div class="container">
     <div class="form-box">
-        <h1 id="title">Login</h1>
-        <form action="/login" method="post">
+        <h1 id="title">Provider Dashboard</h1>
+        <form action="/provider" method="post">
             <div class="input-group">
                 <div class="input-field" id="namefield">
                     <i class="fa-solid fa-user"></i>
-                    <input type="name" name="name" placeholder="Name">
+                    <input type="text" name="typeofservices" placeholder="Provide a service">
                 </div>
 
                
 
                 <div class="input-field">
-                    <i class="fa-solid fa-lock" ></i>
-                    <input type="password" name="password" placeholder="Password">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="tel" name="phoneno" placeholder="Phone Number">
                 </div>
 
-                <p>
-                    Donot have a account <a href="/signup">Sign up</a>
-                </p>
+                <div class="input-field" id="namefield">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" name="Location" placeholder="Address">
+                </div>
+
 
             </div>
             <div class="btn-field">
-                <input type="Submit" id="signupbtn"> 
+                <input type="Submit" placeholder="register"> 
             </div>
         </form>
     </div>

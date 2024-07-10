@@ -47,6 +47,16 @@ app.post("/login", async (req, res) => {
     }
 });
 
+// User Dashboard route
+app.get('/user-dashboard', (req, res) => {
+    res.render('user-dashboard'); // Create a user-dashboard.hbs file
+});
+
+// Provider Dashboard route
+app.get('/provider-dashboard', (req, res) => {
+    res.render('provider-dashboard'); // Create a provider-dashboard.hbs file
+});
+
 app.listen(3001, () => {
     console.log("port connected");
 });

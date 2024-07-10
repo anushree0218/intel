@@ -6,14 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-
-    hi
-
+    <h1>Welcome to common people services</h1>
     <a href="in.html">click here</a>
 
+    <div id="app">
+      
+        <div id="user-options">
+            <h2>Select your role</h2>
+            <button id="userBtn">I am a User</button>
+            <button id="providerBtn">I am a Provider</button>
+        </div>
+    </div>
 
+<script > document.getElementById('userBtn').addEventListener('click', function() {
+    window.location.href = '/user-dashboard'; 
+});
 
-
-
+document.getElementById('providerBtn').addEventListener('click', function() {
+    window.location.href = '/provider-dashboard'; 
+});
+</script>
 </body>
 </html>
