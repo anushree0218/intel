@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Dashboard</title>
     <link rel="stylesheet" href="/styles.css">
+    <script defer src="/search.js"></script> <!-- Include the client-side script -->
 </head>
 <body>
     <div id="app">
         <h1>User Dashboard</h1>
-        
+        <input type="text" id="search-input" placeholder="Search for services">
+        <button id="search-button">Search</button>
+        <div id="search-results"></div>
     </div>
 </body>
 </html>
