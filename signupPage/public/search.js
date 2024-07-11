@@ -1,19 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-input');
-    const locationInput = document.getElementById('location-input');
     const searchButton = document.getElementById('search-button');
     const searchResults = document.getElementById('search-results');
 
     searchButton.addEventListener('click', async () => {
-        const query = searchInput.value.trim();
-        const location = locationInput.value.trim(); // Get location input value
-        
-        if (!query && !location) {
-            searchResults.innerHTML = '<p>Please enter a search query</p>';
-            return;
-        }
-
-        const response = await fetch(`/search?q=${query}&loc=${location}`);
+        const query = searchInput.value;
+        const response = await fetch(`/search?q=${query}`);
         const results = await response.json();
 
         searchResults.innerHTML = '';
