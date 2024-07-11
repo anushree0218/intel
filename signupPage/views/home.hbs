@@ -1,30 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Web Page</title>
+  
+  <style>
+    
+    
+
+    /* Enhanced button styles */
+    .button {
+      background-color:#3c00a0; /* Blue background */
+      border: none; /* Remove borders */
+      color: white; /* White text */
+      padding: 15px 32px; /* Some padding */
+      text-align: center; /* Centered text */
+      text-decoration: none; /* Remove underline */
+      display: inline-block; /* Get the element to sit next to each other */
+      font-size: 16px; /* Increase font size */
+      margin: 10px; /* Add some margin */
+      cursor: pointer; /* Add a pointer cursor on hover */
+      border-radius: 25px; /* More rounded corners */
+      transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth background color change and transform */
+    }
+
+    .button:hover {
+      background-color: #3c00a0; /* Darker blue background on hover */
+      transform: translateY(-2px); /* Slight lift on hover */
+      box-shadow: 0 8px 16px #4306a5; /* Larger shadow on hover */
+    }
+
+    /* Button container positioning */
+    .button-container {
+      display: flex;
+      justify-content: center; /* Center the buttons horizontally */
+      align-items: center; /* Center the buttons vertically */
+      flex-direction: column; /* Stack buttons vertically */
+      margin-top: 20px; /* Space above the container */
+    }
+
+    .button-container .button {
+      margin-bottom: 20px; /* Space between buttons */
+    }
+
+    /* Background image for the body */
+    body {
+     height: 550px;
+      background-size: cover; /* Cover the entire viewport */
+      background-position: center; /* Center the background image */
+      background-repeat: no-repeat; /* No repeat */
+      font-family: 'Inter', sans-serif; /* Font family */
+      color: #140808; /* Default text color */
+      background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)),url(img/background.jpeg); /* Add background color with transparency */
+    }
+
+    /* Content wrapper */
+    .content-wrapper {
+      background-color: #ffffff; /* Semi-transparent background */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: 20px auto; /* Center the wrapper */
+      text-align: center; /* Center text inside */
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to common people services</h1>
-    <a href="in.html">click here</a>
+ 
 
-    <div id="app">
-      
-        <div id="user-options">
-            <h2>Select your role</h2>
-            <button id="userBtn">I am a User</button>
-            <button id="providerBtn">I am a Provider</button>
-        </div>
+  <div class="content-wrapper">
+    <h1>To Enter Common People Services</h1>
+    <img src="img/service.png" height="50px" width="50px" style="vertical-align:middle" alt="services Icon">
+    <button class="button">Click Me</button>
+  </div>
+<div class="content-wrapper">
+    <h2>Select your role</h2>
+    <div class="button-container">
+      <div class="button-wrapper">
+        <img src="img/user.png" height="50px" width="50px" style="vertical-align:middle" alt="User Icon"> <!-- Add your user icon image here -->
+        <button class="button" id="userBtn">I am a User</button>
+      </div>
+      <div class="button-wrapper">
+        <img src="img/provider.jpg " height="50px" width="50px" style="vertical-align:middle" alt="Provider Icon"> <!-- Add your provider icon image here -->
+        <button class="button" id="providerBtn">I am a Provider</button>
+      </div>
     </div>
+  </div>
+ 
 
-<script > document.getElementById('userBtn').addEventListener('click', function() {
-    window.location.href = '/user-dashboard'; 
-});
+  <script>
+    document.getElementById('userBtn').addEventListener('click', function() {
+      window.location.href = '/user-dashboard'; 
+    });
 
-document.getElementById('providerBtn').addEventListener('click', function() {
-    window.location.href = '/provider-dashboard'; 
-});
-</script>
+    document.getElementById('providerBtn').addEventListener('click', function() {
+      window.location.href = '/provider-dashboard'; 
+    });
+  </script>
 </body>
 </html>

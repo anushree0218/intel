@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,59 @@
     <title>User Dashboard</title>
     <link rel="stylesheet" href="/styles.css">
     <script defer src="/search.js"></script> <!-- Include the client-side script -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)),url(img/background.jpeg); /* Add background color with transparency */
+            color: #3c00a0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #app {
+            background:#fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: calc(50% - 22px);
+            padding: 10px;
+            margin: 10px 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        #search-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #ff7f50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+ 
+        .input-field i
+{
+    margin-left: 15px;
+    color: #999;
+}
+        #search-button:hover {
+            background-color: #ff4500;
+        }
+        #search-results {
+            margin-top: 20px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
