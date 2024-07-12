@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfVVXRj107X9Ac_yaEU7btIQ1H0s0gWxA&libraries=places&callback=initialize"></script>
-    <link rel="stylesheet" href="nearbystyle.css">
+    <link rel="stylesheet" href="style.css">
     <title>Find nearby Police</title>
     <style>
         #places img {
@@ -19,7 +19,12 @@
 
     <input id="searchTextField" type="text" size="50" placeholder="Enter your location">
     <div id="map" style="height: 500px;"></div>
-    <table id="places"></table>
+    <table id="places"><tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Photo</th>
+    </tr></table>
 
     
     <script>
@@ -93,20 +98,8 @@
                 }
             });
 
-            var table = document.getElementById("places");
-            var row = table.insertRow();
-            var cell1 = row.insertCell(0);
-            cell1.innerHTML = place.name;
-            if (place.photos && place.photos.length > 0) {
-                let photoUrl = place.photos[0].getUrl();
-                var cell2 = row.insertCell(1);
-                cell2.innerHTML = `<img width="300" height="300" src="${photoUrl}"/>`;
-            } else {
-                let photoUrl = "https://via.placeholder.com/150";
-                var cell2 = row.insertCell(1);
-                cell2.innerHTML = `<img width="300" height="300" src="${photoUrl}"/>`;
-            }
-        }
+        
+        
         var table = document.getElementById("places");
             var row = table.insertRow();
             var cell1 = row.insertCell(0);
@@ -126,6 +119,7 @@
                 let photoUrl = "https://via.placeholder.com/150";
                 cell4.innerHTML = `<img src="${photoUrl}"/>`;
             }
+        }
 
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
