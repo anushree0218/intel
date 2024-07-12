@@ -1,22 +1,124 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+
 .design {
     background-color: #1f2a47;
+    width: 1250px;
     height: 100px;
     color: aliceblue;
     font-size: 3rem;
     align-items: center;
 }
 
-#searchTextField {
-    height: 25px;
-   
-}
 
-#searchTextField::placeholder 
-{
-    color: black;
-    font-size: 20px;
-}
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+
+
+        .design {
+            background-color: #1f2a47;
+            width: 1270px;
+            height: 100px;
+            color: white;
+            font-size: 3rem;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            
+        }
+
+        #searchTextField {
+            margin: 20px 0;
+            padding: 10px;
+            width: 100%;
+            max-width: 600px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        #map {
+            width: 100%;
+            max-width: 800px;
+            height: 500px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            max-width: 800px;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        td img {
+            width: 100px;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            #searchTextField {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            #map {
+                height: 300px;
+            }
+
+            th, td {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            td img {
+                width: 75px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #searchTextField {
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 6px;
+                font-size: 12px;
+            }
+
+            td img {
+                width: 50px;
+            }
+        }
+    
